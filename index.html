@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal by BigChange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .section-header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .accordion-button {
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button:hover {
+            background-color: #e2e8f0;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1rem;
+        }
+        .accordion-content.open {
+            max-height: 500px; /* A value large enough to fit content */
+            padding: 1rem;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+        }
+        .image-container {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            background-color: #f0f0f0;
+            padding: 1rem;
+        }
+        /* Style for the call-to-action button */
+        .cta-button {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex justify-center py-10">
+
+    <div class="container bg-white rounded-xl shadow-lg p-8 md:p-12">
+        <header class="mb-10 flex items-center">
+            <img src="https://ukfacilitiesmanagement.co.uk/wp-content/uploads/2023/06/ukfm-wp-logo120.webp" alt="UKFM Logo" class="h-12 mr-4">
+            <div class="text-center w-full">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800 leading-tight">Your Maintenance Partner, Simplified.</h1>
+                <p class="text-lg md:text-xl text-gray-600 mt-2">A Customer Portal designed for seamless service management.</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <section class="prose max-w-none">
+            <p class="text-gray-700 leading-relaxed text-center text-lg md:text-xl font-semibold mb-6">
+                For the maintenance team at your hotels, managing requests should be simple and efficient. The BigChange Customer Portal provides a straightforward, user-friendly interface to do just that.
+            </p>
+
+            <!-- Key Features Section -->
+            <div class="space-y-6">
+
+                <!-- Feature 1: Raising a New Job -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Requesting a New Job</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4 text-center">
+                        When a new issue arises, the hotel's maintenance team can easily log a new job. The process is quick and intuitive, ensuring no details are missed.
+                    </p>
+                    <div class="image-container">
+                        <p class="text-gray-700 font-semibold text-center mt-4">Step 1: What, Where & When</p>
+                        <img src="https://i.imgur.com/k0epkzT.png" alt="Customer portal - step 1" class="image-placeholder">
+                        <p class="text-gray-700 font-semibold text-center mt-4">Step 2: Job Details & Attachments</p>
+                        <img src="https://i.imgur.com/DE7T9XW.png" alt="Customer portal - step 2" class="image-placeholder">
+                    </div>
+                </div>
+
+                <!-- Feature 2: Instant Communication -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Real-time Updates</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4 text-center">
+                        Once a job is requested, it's immediately sent to UKFM to arrange accordingly. The status updates automatically as the job progresses, so the maintenance manager can see its status at a glance: <strong>Job Confirmed, Engineer on the Way, Job Complete etc.</strong>
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4 text-center">
+                        You can also filer jobs by multiple other parameters, such as date of booking or location if viewing from a 'head office' level, allowing you to easily view each location.
+                    </p>
+                    <div class="image-container">
+                        <img src="https://i.imgur.com/Xxg0gkl.png" alt="Job status updates" class="image-placeholder">
+                    </div>
+                </div>
+
+                <!-- Feature 3: Job History & Documentation -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Accessing Past Job History</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4 text-center">
+                        Need to find a past job report? All completed jobs and their associated documents—like photographs, notes, reports and certification—are stored securely in the portal. Hotel staff can filter by date or status to instantly access the information they need, eliminating the hassle of misplaced paperwork.
+                    </p>
+                    <div class="image-container">
+                        <p class="text-gray-700 font-semibold text-center mt-4">List View with Filter Parameters</p>
+                        <img src="https://i.imgur.com/nGGoGpt.png" alt="Job history list view" class="image-placeholder">
+                        <p class="text-gray-700 font-semibold text-center mt-4">Job Folder with Documents</p>
+                        <img src="https://i.imgur.com/ZKvilPm.png" alt="Job history folder" class="image-placeholder">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Section for Implementation Details -->
+            <div class="mt-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-800 mb-6">Frequently Asked Questions</h2>
+
+                <!-- Question 1: How does it work? -->
+                <div class="rounded-xl border border-gray-200 bg-white shadow-md mb-4">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center focus:outline-none" onclick="toggleAccordion('how-it-works')">
+                        <span class="text-xl font-semibold text-gray-700">How does the portal work for our team?</span>
+                        <svg class="w-6 h-6 text-gray-500 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-how-it-works">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div id="how-it-works" class="accordion-content">
+                        <p class="text-gray-600 leading-relaxed">
+                            Access is provided via a simple login link, which can be saved on a computer or phone. There is no software to install or manage. Each maintenance staff member at the hotels will receive their own login, and their access can be tailored to their specific needs (e.g., the ability to book jobs, but not cancel them).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 2: What about costs? -->
+                <div class="rounded-xl border border-gray-200 bg-white shadow-md mb-4">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center focus:outline-none" onclick="toggleAccordion('costs')">
+                        <span class="text-xl font-semibold text-gray-700">What are the costs involved?</span>
+                        <svg class="w-6 h-6 text-gray-500 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-costs">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div id="costs" class="accordion-content">
+                        <p class="text-gray-600 leading-relaxed">
+                            The Customer Portal is included at no additional cost for your clients. Whether you have two hotels or twenty, your operational costs remain the same. This is a complimentary service provided by UKFM to ensure a seamless partnership.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 3: How long to get started? -->
+                <div class="rounded-xl border border-gray-200 bg-white shadow-md mb-4">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center focus:outline-none" onclick="toggleAccordion('setup')">
+                        <span class="text-xl font-semibold text-gray-700">How long will it take to get set up?</span>
+                        <svg class="w-6 h-6 text-gray-500 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-setup">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div id="setup" class="accordion-content">
+                        <p class="text-gray-600 leading-relaxed">
+                            Setup is instant. The UKFM team will handle all of the in-house configuration and provide a simple login link to each hotel's maintenance manager. This is a fast and easy process, allowing them to get started right away.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Javascript for accordion functionality -->
+            <script>
+                function toggleAccordion(id) {
+                    const content = document.getElementById(id);
+                    const icon = document.getElementById('icon-' + id);
+                    const isOpen = content.classList.contains('open');
+
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.classList.remove('open');
+                    });
+                    document.querySelectorAll('.accordion-button svg').forEach(item => {
+                        item.style.transform = 'rotate(0deg)';
+                    });
+
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        icon.style.transform = 'rotate(45deg)';
+                    }
+                }
+            </script>
+        </section>
+    </div>
+</body>
+</html>
